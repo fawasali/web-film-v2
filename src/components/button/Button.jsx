@@ -1,5 +1,5 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const Button = props => {
   return (
@@ -22,7 +22,7 @@ const OutlineButtom = props => {
 }
 
 Button.propTypes = {
-    onClick: propTypes.func
+    onClick: PropTypes.func
 }
 
 export default Button
