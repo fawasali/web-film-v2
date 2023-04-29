@@ -8,7 +8,7 @@ In the project directory, you can run:
 
 ### `npm i`
 
-Before u start the project, you must run npm i for download build for website to run
+Before u start the project, you must run npm i for download build for website to run.\
 after dowmload finish u can run npm start
 
 ### `npm start`
