@@ -5,22 +5,22 @@ export const category = {
     tv: 'tv'
 }
 
-export const movietype = {
-    upcoming:'upcoming',
-    popular:'popular',
+export const movieType = {
+    upcoming: 'upcoming',
+    popular: 'popular',
     top_rated: 'top_rated'
 }
 
 export const tvType = {
     popular: 'popular',
     top_rated: 'top_rated',
-    on_the_air: 'on_top_air'
+    on_the_air: 'on_the_air'
 }
 
-const tmdbApi= {
-    getMovieList: (type,params) => {
-        const url  = 'movie/' + movietype[type];
-        return axiosClient.get(url.params);
+const tmdbApi = {
+    getMoviesList: (type, params) => {
+        const url = 'movie/' + movieType[type];
+        return axiosClient.get(url, params);
     },
     getTvList: (type, params) => {
         const url = 'tv/' + tvType[type];
@@ -39,14 +39,13 @@ const tmdbApi= {
         return axiosClient.get(url, params);
     },
     credits: (cate, id) => {
-        const url = category[cate]+ '/' + id +'/credit';
+        const url = category[cate] + '/' + id + '/credits';
         return axiosClient.get(url, {params: {}});
     },
     similar: (cate, id) => {
-        const url = category[cate]+ '/' + id +'/similar';
+        const url = category[cate] + '/' + id + '/similar';
         return axiosClient.get(url, {params: {}});
-    }
+    },
 }
-
 
 export default tmdbApi;
